@@ -1,0 +1,6 @@
+{
+  "name": "Amrit Glass",
+  "description": "Amrit Glass, established in 1996, is a trusted retail hardware and home-fittings business in Biswanath Chariali, Assam, offering glass, doors, window glass, locks and handles, bathroom fittings, plywood and laminates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

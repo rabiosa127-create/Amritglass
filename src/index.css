@@ -1,33 +1,71 @@
 @import "tailwindcss";
 
+@theme {
+  --font-display: "Fraunces", "Noto Sans Bengali", "Georgia", serif;
+  --font-sans: "IBM Plex Sans", "Noto Sans Bengali", system-ui, -apple-system, sans-serif;
+
+  --color-ink: #1B211F;
+  --color-ink-soft: #29322E;
+  --color-ink-line: #3A443F;
+
+  --color-paper: #EEF1EC;
+  --color-paper-dim: #E3E7E0;
+
+  --color-brass: #AD7F3B;
+  --color-brass-dark: #8A6329;
+  --color-brass-light: #E4C793;
+
+  --color-glass: #4C6F5F;
+  --color-glass-dark: #375145;
+  --color-glass-light: #C7D5CB;
+
+  --color-steel: #7C8783;
+}
+
 @layer base {
   body {
-    font-family: 'Plus Jakarta Sans', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: var(--color-ink);
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', 'Noto Sans Bengali', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-display);
+  }
+  ::selection {
+    background-color: var(--color-brass-light);
+    color: var(--color-ink);
   }
 }
 
-/* Frosted glass utilities */
+/* Frosted glass utilities, recolored to the paper/ink palette */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(238, 241, 236, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(27, 33, 31, 0.08);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(219, 234, 254, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .glass-pill {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(203, 213, 225, 0.6);
+  border: 1px solid rgba(27, 33, 31, 0.1);
 }
 
+/* A thin edge highlight evoking the green cast of stacked glass sheets */
+.glass-edge {
+  box-shadow: inset 2px 0 0 0 var(--color-glass);
+}
+
+/* Numeral / spec-figure treatment used for the establishment year and glass-thickness style tags */
+.figure-tight {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}

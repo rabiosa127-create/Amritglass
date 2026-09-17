@@ -40,7 +40,7 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-800 selection:bg-blue-100 selection:text-blue-950 font-sans">
+    <div className="min-h-screen flex flex-col bg-white text-ink font-sans">
       {/* Sticky / Floating Navigation */}
       <Navbar activeSection={activeSection} />
 
